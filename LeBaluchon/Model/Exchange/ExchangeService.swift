@@ -16,6 +16,7 @@ class ExchangeService {
         self.exchangeSession = exchangeSession
     }
     
+    // Creating the request from the URL with accessKey
     func getExchange(callback: @escaping (Result<Exchange, NetworkError>) -> Void) {
         guard let exchangeUrl = URL(string: "http://data.fixer.io/api/latest?access_key=e2d71f05e19fa36df616ad68550e8e29&symbols=USD") else { return }
         task?.cancel()
@@ -38,11 +39,9 @@ class ExchangeService {
             
             callback(.success(exchange))
             
-            
         })
         task?.resume()
     }
-
 }
 
 enum NetworkError: Error {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T5R-bU-P6e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T5R-bU-P6e">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,23 +16,111 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNu-E0-4IO">
-                                <rect key="frame" x="186" y="379" width="49" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kUK-51-hOr">
+                                <rect key="frame" x="50" y="108" width="314" height="47"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vv2-3l-gJM">
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="47"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                        <state key="normal" title="Translate">
+                                            <color key="titleColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="translateTextButton:" destination="h7h-Nx-POl" eventType="touchUpInside" id="XAd-H9-rVu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTL-mQ-a7P">
+                                        <rect key="frame" x="162" y="0.0" width="152" height="47"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                        <state key="normal" title="Refresh">
+                                            <color key="titleColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="refreshTextViewButton:" destination="h7h-Nx-POl" eventType="touchUpInside" id="M0J-DJ-Z3c"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="French" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNu-E0-4IO" userLabel="FrenchLabel">
+                                <rect key="frame" x="60" y="185" width="294" height="32.5"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="28"/>
+                                <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="t99-AY-qt1" userLabel="French Text View">
+                                <rect key="frame" x="50" y="237.5" width="314" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="T0v-JF-eRt"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="yes" keyboardType="alphabet" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="h7h-Nx-POl" id="eba-xt-X3f"/>
+                                </connections>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFG-uO-9Rb" userLabel="EnglishLabel">
+                                <rect key="frame" x="60" y="467.5" width="294" height="32.5"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="28"/>
+                                <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IwH-Nt-Ylx" userLabel="English Text View">
+                                <rect key="frame" x="50" y="520" width="314" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="GcA-UT-BK1"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iYD-yK-ssv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aNu-E0-4IO" firstAttribute="top" secondItem="kUK-51-hOr" secondAttribute="bottom" constant="30" id="0sW-PY-pRb"/>
+                            <constraint firstItem="iYD-yK-ssv" firstAttribute="trailing" secondItem="kUK-51-hOr" secondAttribute="trailing" constant="50" id="96l-de-hpW"/>
+                            <constraint firstItem="IwH-Nt-Ylx" firstAttribute="top" secondItem="XFG-uO-9Rb" secondAttribute="bottom" constant="20" id="HDD-42-zt4"/>
+                            <constraint firstItem="XFG-uO-9Rb" firstAttribute="top" secondItem="t99-AY-qt1" secondAttribute="bottom" constant="30" id="Lt6-Oe-N8j"/>
+                            <constraint firstItem="XFG-uO-9Rb" firstAttribute="leading" secondItem="iYD-yK-ssv" secondAttribute="leading" constant="60" id="ROv-IN-Y9o"/>
+                            <constraint firstItem="iYD-yK-ssv" firstAttribute="trailing" secondItem="t99-AY-qt1" secondAttribute="trailing" constant="50" id="RhM-IT-KAi"/>
+                            <constraint firstItem="kUK-51-hOr" firstAttribute="leading" secondItem="iYD-yK-ssv" secondAttribute="leading" constant="50" id="TXn-78-ZmG"/>
+                            <constraint firstItem="kUK-51-hOr" firstAttribute="centerX" secondItem="grc-N6-tNQ" secondAttribute="centerX" id="Tue-AT-AcQ"/>
+                            <constraint firstItem="t99-AY-qt1" firstAttribute="leading" secondItem="iYD-yK-ssv" secondAttribute="leading" constant="50" id="Usg-hF-iJ6"/>
+                            <constraint firstItem="IwH-Nt-Ylx" firstAttribute="leading" secondItem="iYD-yK-ssv" secondAttribute="leading" constant="50" id="i5q-19-67J"/>
+                            <constraint firstItem="aNu-E0-4IO" firstAttribute="leading" secondItem="iYD-yK-ssv" secondAttribute="leading" constant="60" id="tdZ-ur-9Ic"/>
+                            <constraint firstItem="kUK-51-hOr" firstAttribute="top" secondItem="iYD-yK-ssv" secondAttribute="top" constant="20" id="udf-Ke-nBN"/>
+                            <constraint firstItem="iYD-yK-ssv" firstAttribute="trailing" secondItem="aNu-E0-4IO" secondAttribute="trailing" constant="60" id="unh-3m-sTn"/>
+                            <constraint firstItem="iYD-yK-ssv" firstAttribute="trailing" secondItem="IwH-Nt-Ylx" secondAttribute="trailing" constant="50" id="vG2-nl-Q84"/>
+                            <constraint firstItem="t99-AY-qt1" firstAttribute="top" secondItem="aNu-E0-4IO" secondAttribute="bottom" constant="20" id="xSF-2g-ans"/>
+                            <constraint firstItem="iYD-yK-ssv" firstAttribute="trailing" secondItem="XFG-uO-9Rb" secondAttribute="trailing" constant="60" id="ywl-Mh-1RZ"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="CSx-UP-6a1" appends="YES" id="8JF-ny-uak"/>
+                        </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Translate" id="aoB-4l-3Vd"/>
+                    <tabBarItem key="tabBarItem" title="Translate" image="translate" id="aoB-4l-3Vd"/>
                     <navigationItem key="navigationItem" id="5MR-VJ-OuR"/>
+                    <connections>
+                        <outlet property="englishLabel" destination="XFG-uO-9Rb" id="5Ni-Cm-Ysc"/>
+                        <outlet property="englishTextView" destination="IwH-Nt-Ylx" id="rMu-7E-nez"/>
+                        <outlet property="frenchLabel" destination="aNu-E0-4IO" id="3z0-rZ-faQ"/>
+                        <outlet property="frenchTextView" destination="t99-AY-qt1" id="oRX-0e-jww"/>
+                        <outlet property="refreshButton" destination="JTL-mQ-a7P" id="7Jz-tL-UM6"/>
+                        <outlet property="translateButton" destination="vv2-3l-gJM" id="5am-h8-mdY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RhP-5i-MxO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CSx-UP-6a1">
+                    <connections>
+                        <action selector="dissmissKeyboard:" destination="h7h-Nx-POl" id="RQZ-Ng-cvO"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="180" y="1450"/>
+            <point key="canvasLocation" x="179.71014492753625" y="1449.7767857142856"/>
         </scene>
         <!--Change-->
         <scene sceneID="0aa-Zn-cF6">
@@ -42,80 +130,124 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="3iz-bi-jz4" userLabel="Exchange Stack View">
-                                <rect key="frame" x="50" y="153" width="314" height="350.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="3iz-bi-jz4" userLabel="Exchange Stack View">
+                                <rect key="frame" x="20" y="153" width="374" height="464.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZDb-Zs-zFO" userLabel="From Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="43"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZDb-Zs-zFO" userLabel="From Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSl-7d-J8h">
-                                                <rect key="frame" x="0.0" y="0.0" width="154.5" height="43"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="EUR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSl-7d-J8h" userLabel="Country From Exchange Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="182" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Fcp-tS-PHq">
-                                                <rect key="frame" x="159.5" y="0.0" width="154.5" height="43"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" textContentType="name"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fcp-tS-PHq">
+                                                <rect key="frame" x="192" y="0.0" width="182" height="40"/>
+                                                <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="26"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="continue" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="r25-Wg-2Gh" id="bdD-Bb-If2"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UdO-YD-xgK" userLabel="To Stack View">
-                                        <rect key="frame" x="0.0" y="87" width="314" height="43"/>
+                                        <rect key="frame" x="0.0" y="80" width="374" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yx4-SX-hA3">
-                                                <rect key="frame" x="0.0" y="0.0" width="152" height="43"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yx4-SX-hA3">
+                                                <rect key="frame" x="0.0" y="0.0" width="182" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TNa-N6-TDA">
-                                                <rect key="frame" x="162" y="0.0" width="152" height="43"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" textContentType="name"/>
-                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIO-SM-B2i">
+                                                <rect key="frame" x="192" y="0.0" width="182" height="50"/>
+                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="26"/>
+                                                <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ger-it-uaS">
-                                        <rect key="frame" x="0.0" y="174" width="314" height="176.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Ger-it-uaS" secondAttribute="height" multiplier="16:9" id="yKp-VS-N4c"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="61"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I27-Q5-3tz">
+                                        <rect key="frame" x="0.0" y="170" width="374" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="26"/>
                                         <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOV-ou-ofO">
+                                        <rect key="frame" x="0.0" y="240.5" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="rDD-o5-4Va"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="26"/>
+                                        <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAd-HI-lzC">
+                                        <rect key="frame" x="0.0" y="330.5" width="374" height="47"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                        <state key="normal" title="Convertir">
+                                            <color key="titleColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="convert:" destination="r25-Wg-2Gh" eventType="touchUpInside" id="8UB-Nh-sTq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBF-3C-T3U">
+                                        <rect key="frame" x="0.0" y="417.5" width="374" height="47"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                        <state key="normal" title="Rafraîchir">
+                                            <color key="titleColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="refresh:" destination="r25-Wg-2Gh" eventType="touchUpInside" id="MDT-ae-U8E"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xgx-aa-HSh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="3iz-bi-jz4" firstAttribute="leading" secondItem="xgx-aa-HSh" secondAttribute="leading" constant="50" id="6FP-9i-Yk9"/>
-                            <constraint firstItem="xgx-aa-HSh" firstAttribute="trailing" secondItem="3iz-bi-jz4" secondAttribute="trailing" constant="50" id="Rkz-ca-H7h"/>
+                            <constraint firstItem="3iz-bi-jz4" firstAttribute="leading" secondItem="xgx-aa-HSh" secondAttribute="leading" constant="20" id="6FP-9i-Yk9"/>
+                            <constraint firstItem="xgx-aa-HSh" firstAttribute="trailing" secondItem="3iz-bi-jz4" secondAttribute="trailing" constant="20" id="Rkz-ca-H7h"/>
                             <constraint firstItem="3iz-bi-jz4" firstAttribute="centerX" secondItem="CRJ-db-WyQ" secondAttribute="centerX" id="VkJ-cg-IB2"/>
                             <constraint firstItem="3iz-bi-jz4" firstAttribute="top" secondItem="xgx-aa-HSh" secondAttribute="top" constant="65" id="ezT-D3-mI3"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="OhL-pL-7Wj" appends="YES" id="cVv-jN-zUB"/>
+                        </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Exchange" id="Fa7-ZK-GfW" customClass="Chan"/>
+                    <tabBarItem key="tabBarItem" title="Exchange" image="money" selectedImage="money" id="Fa7-ZK-GfW" customClass="Chan"/>
                     <navigationItem key="navigationItem" id="UaK-rY-gRU"/>
                     <connections>
+                        <outlet property="convertButton" destination="oAd-HI-lzC" id="cBX-Qc-55w"/>
                         <outlet property="countryFromExchange" destination="SSl-7d-J8h" id="Bgy-rl-SHA"/>
-                        <outlet property="countryToExchange" destination="yx4-SX-hA3" id="McX-SF-84V"/>
-                        <outlet property="deviceFromExchange" destination="Fcp-tS-PHq" id="ujK-FN-MX3"/>
-                        <outlet property="deviceToExchange" destination="TNa-N6-TDA" id="ord-Ee-Qpx"/>
-                        <outlet property="resultExchange" destination="Ger-it-uaS" id="bDz-bj-dIq"/>
+                        <outlet property="countryToExchange" destination="yx4-SX-hA3" id="FhW-ih-aYC"/>
+                        <outlet property="currencyToConvertTextField" destination="Fcp-tS-PHq" id="MJV-ch-9Ai"/>
+                        <outlet property="dateExchangeLabel" destination="OOV-ou-ofO" id="b9C-IV-rEx"/>
+                        <outlet property="rateTodayCurrency" destination="I27-Q5-3tz" id="4yM-4B-vGX"/>
+                        <outlet property="refreshButton" destination="kBF-3C-T3U" id="XZo-64-N5k"/>
+                        <outlet property="resultExchangeLabel" destination="XIO-SM-B2i" id="Bc6-dI-nSW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIO-i2-9B5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="OhL-pL-7Wj">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="r25-Wg-2Gh" id="gkm-s3-mz0"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="179.71014492753625" y="725.89285714285711"/>
         </scene>
@@ -129,7 +261,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="gYO-Yl-kS1" kind="relationship" relationship="viewControllers" id="Kmv-pe-Dcq"/>
                         <segue destination="lBX-T0-cbO" kind="relationship" relationship="viewControllers" id="Jfj-2p-zic"/>
                         <segue destination="uzh-I4-44h" kind="relationship" relationship="viewControllers" id="Ndl-uD-WWb"/>
                         <segue destination="RZr-VU-Ig5" kind="relationship" relationship="viewControllers" id="ym2-hc-1s6"/>
@@ -143,201 +274,221 @@
         <scene sceneID="FMF-3E-5PS">
             <objects>
                 <navigationController id="RZr-VU-Ig5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Weather" id="pRH-ti-vmF"/>
+                    <tabBarItem key="tabBarItem" title="Weather" image="tornadito" id="pRH-ti-vmF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ha7-dB-43f">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ytL-ea-lVE" kind="relationship" relationship="rootViewController" id="wC7-xa-Ree"/>
+                        <segue destination="cf6-PO-CQc" kind="relationship" relationship="rootViewController" id="ZSJ-ST-Rrl"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uo8-ce-wfe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-533" y="-698"/>
+            <point key="canvasLocation" x="-533" y="-33"/>
         </scene>
-        <!--Weather-->
-        <scene sceneID="CLa-z6-hYV">
+        <!--Weather View Controller-->
+        <scene sceneID="ndI-qs-MVh">
             <objects>
-                <viewController title="Weather" id="ytL-ea-lVE" customClass="WeatherViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Qi2-hH-JWZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="SNb-aa-mtY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Weather" id="fSm-3Y-22s"/>
-                    <navigationItem key="navigationItem" id="FQW-pb-dXF"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rc9-IQ-Tlc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="180" y="-698"/>
-        </scene>
-        <!--Welcome-->
-        <scene sceneID="z5z-P7-j2g">
-            <objects>
-                <navigationController toolbarHidden="NO" id="gYO-Yl-kS1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Welcome" id="v02-2P-pTk"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2pw-6y-NdX">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="26"/>
-                            <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <color key="textShadowColor" red="0.3340728879" green="0.41503423449999999" blue="0.50596541169999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J4J-ay-Egc">
-                        <rect key="frame" x="0.0" y="764" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="dn0-ur-ooU" kind="relationship" relationship="rootViewController" id="xpk-A0-AMw"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0GS-xs-K8n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-532" y="17"/>
-        </scene>
-        <!--Welcome-->
-        <scene sceneID="Xxw-N4-7TJ">
-            <objects>
-                <viewController id="dn0-ur-ooU" customClass="WelcomeViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DZX-Uj-TcW">
+                <viewController id="cf6-PO-CQc" customClass="WeatherViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aaR-WX-xaK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lC9-Lt-lLT">
-                                <rect key="frame" x="20" y="361" width="375" height="174"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="135"/>
-                                <state key="normal" title="Go ?">
-                                    <color key="titleColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <color key="titleShadowColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="z2L-Qo-d86" kind="show" id="etQ-FM-n5k"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where do you want to " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kf4-bq-chw">
-                                <rect key="frame" x="63" y="221" width="289" height="132"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="45"/>
-                                <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8Iw-yY-B6Y" userLabel="Weather Stack View">
+                                <rect key="frame" x="20" y="128" width="374" height="616"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pcC-aU-ILS" userLabel="Destination Info Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="298"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yI4-aW-OSr" userLabel="Destination Country Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="298"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="75f-Os-vZs" userLabel="Destination City Stack View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="144"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U.S.A." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIj-aY-fVZ" userLabel="Dest Country Label">
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="69.5"/>
+                                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                                                <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeZ-78-JHo" userLabel="Dest City Label">
+                                                                <rect key="frame" x="0.0" y="74.5" width="187" height="69.5"/>
+                                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                                                <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AnS-yU-HiW" userLabel="Destination Info Stack View">
+                                                        <rect key="frame" x="0.0" y="154" width="187" height="144"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dj8-yZ-ceR" userLabel="Dest Temp Stack View">
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="69.5"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thermometer" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNq-P3-mvR" userLabel="Dest Temp Image View">
+                                                                        <rect key="frame" x="0.0" y="0.5" width="91" height="70"/>
+                                                                        <color key="tintColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gk-FT-dAF" userLabel="Dest Celcius Label">
+                                                                        <rect key="frame" x="96" y="0.0" width="91" height="69.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="g2W-3T-ne7" userLabel="Dest Wind Stack View">
+                                                                <rect key="frame" x="0.0" y="74.5" width="187" height="69.5"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wind" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3H5-HX-0Di" userLabel="Dest Wind Image View">
+                                                                        <rect key="frame" x="0.0" y="2" width="91" height="66.5"/>
+                                                                        <color key="tintColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fy4-Up-bws" userLabel="Dest Speed Label">
+                                                                        <rect key="frame" x="96" y="0.0" width="91" height="69.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BAc-U0-p3Y" userLabel="Destination Clouds Stack View">
+                                                <rect key="frame" x="187" y="0.0" width="187" height="298"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lZq-WZ-w5X">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="146.5"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYq-k3-J5I" userLabel="Description Cloud Label">
+                                                        <rect key="frame" x="0.0" y="151.5" width="187" height="146.5"/>
+                                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                                        <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wMB-Po-dbH" userLabel="Local Info Stack View">
+                                        <rect key="frame" x="0.0" y="318" width="374" height="298"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g9Q-Ix-Yma" userLabel="Local Country Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="298"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xKk-6t-X1b" userLabel="Local City Stack View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="144"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="France" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiQ-Vf-Ohg" userLabel="Local Country Label">
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="69.5"/>
+                                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                                                <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paris" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k41-gh-lnS" userLabel="Local City Label">
+                                                                <rect key="frame" x="0.0" y="74.5" width="187" height="69.5"/>
+                                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                                                <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="K99-0v-bpY" userLabel="Local Info Stack View">
+                                                        <rect key="frame" x="0.0" y="154" width="187" height="144"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="F97-ET-3Ke" userLabel="Local Temp Stack View">
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="69.5"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thermometer" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aAQ-Vq-gwi" userLabel="Temp Image View">
+                                                                        <rect key="frame" x="0.0" y="0.5" width="91" height="70"/>
+                                                                        <color key="tintColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTa-a6-XLd" userLabel="Celcius Label">
+                                                                        <rect key="frame" x="96" y="0.0" width="91" height="69.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="74Y-fk-frB" userLabel="Local Wind Stack View">
+                                                                <rect key="frame" x="0.0" y="74.5" width="187" height="69.5"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wind" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wDn-9G-rDD" userLabel="Local Wind Image View">
+                                                                        <rect key="frame" x="0.0" y="2" width="91" height="66.5"/>
+                                                                        <color key="tintColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDt-Nl-Xph" userLabel="Local Speed Wind Label">
+                                                                        <rect key="frame" x="96" y="0.0" width="91" height="69.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="p3i-Nb-lBa" userLabel="Local Clouds Stack View">
+                                                <rect key="frame" x="187" y="0.0" width="187" height="298"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C0S-RC-td8" userLabel="Local Cloud Image View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="146.5"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2P-Yh-Nvd" userLabel="Local CLoud Description Label">
+                                                        <rect key="frame" x="0.0" y="151.5" width="187" height="146.5"/>
+                                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                                        <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="HyM-Lr-s8S"/>
+                        <viewLayoutGuide key="safeArea" id="jt5-DU-FYS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lC9-Lt-lLT" firstAttribute="centerY" secondItem="DZX-Uj-TcW" secondAttribute="centerY" id="2Aj-2b-Jwq"/>
-                            <constraint firstItem="lC9-Lt-lLT" firstAttribute="centerX" secondItem="DZX-Uj-TcW" secondAttribute="centerX" id="KCA-OT-0jr"/>
+                            <constraint firstItem="jt5-DU-FYS" firstAttribute="trailing" secondItem="8Iw-yY-B6Y" secondAttribute="trailing" constant="20" id="5pa-CF-Pgw"/>
+                            <constraint firstItem="8Iw-yY-B6Y" firstAttribute="top" secondItem="jt5-DU-FYS" secondAttribute="top" constant="40" id="U8f-jw-i8w"/>
+                            <constraint firstItem="jt5-DU-FYS" firstAttribute="bottom" secondItem="8Iw-yY-B6Y" secondAttribute="bottom" constant="69" id="daP-CT-WeV"/>
+                            <constraint firstItem="8Iw-yY-B6Y" firstAttribute="leading" secondItem="jt5-DU-FYS" secondAttribute="leading" constant="20" id="l9A-tl-V51"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Welcome" id="HTk-0s-Ahs"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SNU-ZL-A2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="179.71014492753625" y="16.741071428571427"/>
-        </scene>
-        <!--Where To Go View Controller-->
-        <scene sceneID="sTg-gg-dx8">
-            <objects>
-                <viewController id="z2L-Qo-d86" customClass="WhereToGoViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EQS-xe-wtk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8H-Qa-0pV">
-                                <rect key="frame" x="20" y="685" width="374" height="59"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="40"/>
-                                <state key="normal" title="Valider">
-                                    <color key="titleColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="destinationValidate:" destination="z2L-Qo-d86" eventType="touchUpInside" id="VhR-oW-V2f"/>
-                                    <action selector="validateButton:" destination="EvT-DL-Jax" eventType="touchUpInside" id="h0E-Yx-FHn"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose your destination Country" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Doh-av-L9R">
-                                <rect key="frame" x="20" y="88" width="374" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="31"/>
-                                <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Whish Continent ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AS8-qj-Bp8">
-                                <rect key="frame" x="20" y="210" width="374" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="21"/>
-                                <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Whish Country ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7f-Fx-2RB">
-                                <rect key="frame" x="20" y="438" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="21"/>
-                                <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aTv-0w-hHc">
-                                <rect key="frame" x="20" y="243" width="374" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="z2L-Qo-d86" id="nQg-3g-hJN"/>
-                                    <outlet property="delegate" destination="z2L-Qo-d86" id="gOp-qe-TNh"/>
-                                </connections>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QBp-HB-m4p">
-                                <rect key="frame" x="20" y="492" width="374" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="z2L-Qo-d86" id="QWf-WK-GRU"/>
-                                    <outlet property="delegate" destination="z2L-Qo-d86" id="SY9-NK-Tl6"/>
-                                </connections>
-                            </pickerView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="yCE-bt-I75"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="yCE-bt-I75" firstAttribute="bottom" secondItem="U8H-Qa-0pV" secondAttribute="bottom" constant="20" id="BbW-3v-YwT"/>
-                            <constraint firstItem="U8H-Qa-0pV" firstAttribute="leading" secondItem="yCE-bt-I75" secondAttribute="leading" constant="20" id="d2l-FG-HsM"/>
-                            <constraint firstItem="yCE-bt-I75" firstAttribute="trailing" secondItem="U8H-Qa-0pV" secondAttribute="trailing" constant="20" id="f7e-fu-eyh"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="M7T-3T-e2k"/>
+                    <navigationItem key="navigationItem" id="cM3-un-0MK"/>
                     <connections>
-                        <outlet property="continentPickerView" destination="aTv-0w-hHc" id="Xgh-la-IpK"/>
-                        <outlet property="countryPickerView" destination="QBp-HB-m4p" id="tBl-Hj-IMu"/>
-                        <segue destination="UdN-qV-kml" kind="show" identifier="segueToDestination" id="fMU-RB-HF2"/>
+                        <outlet property="descriptionDestCloudLabel" destination="bYq-k3-J5I" id="5a0-hb-iF9"/>
+                        <outlet property="destCityLabel" destination="EeZ-78-JHo" id="JC5-fm-qH9"/>
+                        <outlet property="destCountryLabel" destination="jIj-aY-fVZ" id="6ch-bV-VPz"/>
+                        <outlet property="destWeatherImageView" destination="lZq-WZ-w5X" id="inf-Fl-iNQ"/>
+                        <outlet property="destinationSpeedWindLabel" destination="Fy4-Up-bws" id="yzf-gg-nSt"/>
+                        <outlet property="destinationTempLabel" destination="1gk-FT-dAF" id="Bop-cV-BKz"/>
+                        <outlet property="localCityLabel" destination="k41-gh-lnS" id="Iw6-Wa-vnc"/>
+                        <outlet property="localCountryLabel" destination="yiQ-Vf-Ohg" id="FiA-j7-hIy"/>
+                        <outlet property="localDescriptionCloudLabel" destination="I2P-Yh-Nvd" id="BML-Xh-oXE"/>
+                        <outlet property="localSpeedWindLabel" destination="aDt-Nl-Xph" id="rhH-GV-GO2"/>
+                        <outlet property="localTempLabel" destination="hTa-a6-XLd" id="Cid-d4-bOu"/>
+                        <outlet property="localWeatherImageView" destination="C0S-RC-td8" id="kxv-ya-kdP"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fE9-CD-vV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="EvT-DL-Jax" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8jn-CD-bmy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911.59420289855075" y="16.741071428571427"/>
-        </scene>
-        <!--Destination View Controller-->
-        <scene sceneID="EgE-TD-1OM">
-            <objects>
-                <viewController id="UdN-qV-kml" customClass="DestinationViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ww7-2m-ttT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="sli-YT-kWN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="iYp-KQ-nrf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Odq-lB-Eod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1622" y="17"/>
+            <point key="canvasLocation" x="231.8840579710145" y="-33.482142857142854"/>
         </scene>
         <!--Translate-->
         <scene sceneID="M2u-ZC-yax">
             <objects>
                 <navigationController id="uzh-I4-44h" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Translate" id="4Ws-va-PYk"/>
+                    <tabBarItem key="tabBarItem" title="Translate" image="translate" id="4Ws-va-PYk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zhP-vf-88l">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -354,7 +505,7 @@
         <scene sceneID="605-Km-NbD">
             <objects>
                 <navigationController id="lBX-T0-cbO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Exchange" id="UMc-Ff-5da"/>
+                    <tabBarItem key="tabBarItem" title="Exchange" image="money" id="UMc-Ff-5da"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wdU-kK-rfw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -369,14 +520,19 @@
         </scene>
     </scenes>
     <resources>
+        <image name="money" width="20" height="20"/>
+        <image name="thermometer" catalog="system" width="93" height="128"/>
+        <image name="tornadito" width="12" height="20"/>
+        <image name="translate" width="20" height="20"/>
+        <image name="wind" catalog="system" width="128" height="101"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tertiarySystemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
