@@ -11,8 +11,6 @@
 		1A10DED6255952BC00949512 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A10DED5255952BC00949512 /* Exchange.swift */; };
 		1A110FA32565DAAE00DE32CC /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A110FA22565DAAE00DE32CC /* WeatherData.swift */; };
 		1A110FA82565DB0200DE32CC /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A110FA72565DB0200DE32CC /* WeatherService.swift */; };
-		1A1A36E5255DAEED003EFDA7 /* Devises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A36E4255DAEED003EFDA7 /* Devises.swift */; };
-		1A1A36ED255DAF58003EFDA7 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A36EC255DAF58003EFDA7 /* Language.swift */; };
 		1A6670362571825600BFCE37 /* TranslateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6670352571825600BFCE37 /* TranslateData.swift */; };
 		1A7A4F35255406580096BA3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7A4F34255406580096BA3E /* AppDelegate.swift */; };
 		1A7A4F37255406580096BA3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7A4F36255406580096BA3E /* SceneDelegate.swift */; };
@@ -20,25 +18,24 @@
 		1A7A4F3F255406580096BA3E /* LeBaluchon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A7A4F3D255406580096BA3E /* LeBaluchon.xcdatamodeld */; };
 		1A7A4F412554065D0096BA3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7A4F402554065D0096BA3E /* Assets.xcassets */; };
 		1A7A4F442554065D0096BA3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A7A4F422554065D0096BA3E /* LaunchScreen.storyboard */; };
-		1A7A4F4F2554065D0096BA3E /* LeBaluchonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7A4F4E2554065D0096BA3E /* LeBaluchonTests.swift */; };
-		1A7A4F5A2554065D0096BA3E /* LeBaluchonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7A4F592554065D0096BA3E /* LeBaluchonUITests.swift */; };
 		1A7A4F82255560750096BA3E /* Continent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7A4F81255560750096BA3E /* Continent.swift */; };
 		1A7A4F87255567770096BA3E /* Countrys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7A4F86255567770096BA3E /* Countrys.swift */; };
 		1A7A4F922556ABA80096BA3E /* ExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7A4F912556ABA80096BA3E /* ExchangeViewController.swift */; };
 		1A7A4F972556ABC20096BA3E /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7A4F962556ABC20096BA3E /* TranslateViewController.swift */; };
 		1A7A4F9C2556AC060096BA3E /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7A4F9B2556AC060096BA3E /* WeatherViewController.swift */; };
+		1A8916A9257F856C0026D3B9 /* Exchange.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A8916A8257F856C0026D3B9 /* Exchange.json */; };
+		1A8916AE257F85860026D3B9 /* Weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A8916AD257F85860026D3B9 /* Weather.json */; };
+		1A8916B3257F85990026D3B9 /* Translate.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A8916B2257F85990026D3B9 /* Translate.json */; };
+		1A8916B8257F8A7B0026D3B9 /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8916B7257F8A7B0026D3B9 /* FakeResponseData.swift */; };
+		1A8916BD257FCC490026D3B9 /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8916BC257FCC490026D3B9 /* URLSessionFake.swift */; };
+		1A9FD3CB2580CF16003F20A2 /* TranslateServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9FD3CA2580CF16003F20A2 /* TranslateServiceTests.swift */; };
+		1A9FD3D02580CF85003F20A2 /* WeatherServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9FD3CF2580CF85003F20A2 /* WeatherServiceTests.swift */; };
+		1A9FD3D52580CF99003F20A2 /* ExchangeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9FD3D42580CF99003F20A2 /* ExchangeServiceTests.swift */; };
 		1ACE19C22573A5FE003ABF1E /* TranslateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE19C12573A5FE003ABF1E /* TranslateService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		1A7A4F4B2554065D0096BA3E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1A7A4F29255406580096BA3E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1A7A4F30255406580096BA3E;
-			remoteInfo = LeBaluchon;
-		};
-		1A7A4F562554065D0096BA3E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1A7A4F29255406580096BA3E /* Project object */;
 			proxyType = 1;
@@ -52,8 +49,6 @@
 		1A10DED5255952BC00949512 /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
 		1A110FA22565DAAE00DE32CC /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		1A110FA72565DB0200DE32CC /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
-		1A1A36E4255DAEED003EFDA7 /* Devises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devises.swift; sourceTree = "<group>"; };
-		1A1A36EC255DAF58003EFDA7 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		1A6670352571825600BFCE37 /* TranslateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateData.swift; sourceTree = "<group>"; };
 		1A7A4F31255406580096BA3E /* LeBaluchon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeBaluchon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7A4F34255406580096BA3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,16 +59,20 @@
 		1A7A4F432554065D0096BA3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A7A4F452554065D0096BA3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7A4F4A2554065D0096BA3E /* LeBaluchonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeBaluchonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A7A4F4E2554065D0096BA3E /* LeBaluchonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeBaluchonTests.swift; sourceTree = "<group>"; };
 		1A7A4F502554065D0096BA3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A7A4F552554065D0096BA3E /* LeBaluchonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeBaluchonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A7A4F592554065D0096BA3E /* LeBaluchonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeBaluchonUITests.swift; sourceTree = "<group>"; };
-		1A7A4F5B2554065D0096BA3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7A4F81255560750096BA3E /* Continent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Continent.swift; sourceTree = "<group>"; };
 		1A7A4F86255567770096BA3E /* Countrys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countrys.swift; sourceTree = "<group>"; };
 		1A7A4F912556ABA80096BA3E /* ExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeViewController.swift; sourceTree = "<group>"; };
 		1A7A4F962556ABC20096BA3E /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		1A7A4F9B2556AC060096BA3E /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		1A8916A8257F856C0026D3B9 /* Exchange.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Exchange.json; sourceTree = "<group>"; };
+		1A8916AD257F85860026D3B9 /* Weather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Weather.json; sourceTree = "<group>"; };
+		1A8916B2257F85990026D3B9 /* Translate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Translate.json; sourceTree = "<group>"; };
+		1A8916B7257F8A7B0026D3B9 /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
+		1A8916BC257FCC490026D3B9 /* URLSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFake.swift; sourceTree = "<group>"; };
+		1A9FD3CA2580CF16003F20A2 /* TranslateServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateServiceTests.swift; sourceTree = "<group>"; };
+		1A9FD3CF2580CF85003F20A2 /* WeatherServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceTests.swift; sourceTree = "<group>"; };
+		1A9FD3D42580CF99003F20A2 /* ExchangeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeServiceTests.swift; sourceTree = "<group>"; };
 		1ACE19C12573A5FE003ABF1E /* TranslateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,13 +85,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1A7A4F472554065D0096BA3E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1A7A4F522554065D0096BA3E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -116,7 +108,6 @@
 		1A672DD625607DFC00635E2B /* Translate */ = {
 			isa = PBXGroup;
 			children = (
-				1A1A36EC255DAF58003EFDA7 /* Language.swift */,
 				1A6670352571825600BFCE37 /* TranslateData.swift */,
 				1ACE19C12573A5FE003ABF1E /* TranslateService.swift */,
 			);
@@ -135,7 +126,6 @@
 		1A672DD825607E1800635E2B /* Exchange */ = {
 			isa = PBXGroup;
 			children = (
-				1A1A36E4255DAEED003EFDA7 /* Devises.swift */,
 				1A10DECD2558F53300949512 /* ExchangeService.swift */,
 				1A10DED5255952BC00949512 /* Exchange.swift */,
 			);
@@ -147,7 +137,6 @@
 			children = (
 				1A7A4F33255406580096BA3E /* LeBaluchon */,
 				1A7A4F4D2554065D0096BA3E /* LeBaluchonTests */,
-				1A7A4F582554065D0096BA3E /* LeBaluchonUITests */,
 				1A7A4F32255406580096BA3E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -157,7 +146,6 @@
 			children = (
 				1A7A4F31255406580096BA3E /* LeBaluchon.app */,
 				1A7A4F4A2554065D0096BA3E /* LeBaluchonTests.xctest */,
-				1A7A4F552554065D0096BA3E /* LeBaluchonUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +153,7 @@
 		1A7A4F33255406580096BA3E /* LeBaluchon */ = {
 			isa = PBXGroup;
 			children = (
+				1A1A36E3255DAEC1003EFDA7 /* Suporting Files */,
 				1A7A4F34255406580096BA3E /* AppDelegate.swift */,
 				1A7A4F452554065D0096BA3E /* Info.plist */,
 				1A7A4F6A2554067A0096BA3E /* Model */,
@@ -178,19 +167,11 @@
 		1A7A4F4D2554065D0096BA3E /* LeBaluchonTests */ = {
 			isa = PBXGroup;
 			children = (
-				1A7A4F4E2554065D0096BA3E /* LeBaluchonTests.swift */,
+				1A9FD3C62580CE9D003F20A2 /* Helpers */,
+				1A9FD3C22580CE4D003F20A2 /* Model */,
 				1A7A4F502554065D0096BA3E /* Info.plist */,
 			);
 			path = LeBaluchonTests;
-			sourceTree = "<group>";
-		};
-		1A7A4F582554065D0096BA3E /* LeBaluchonUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1A7A4F592554065D0096BA3E /* LeBaluchonUITests.swift */,
-				1A7A4F5B2554065D0096BA3E /* Info.plist */,
-			);
-			path = LeBaluchonUITests;
 			sourceTree = "<group>";
 		};
 		1A7A4F6A2554067A0096BA3E /* Model */ = {
@@ -199,7 +180,6 @@
 				1A672DD825607E1800635E2B /* Exchange */,
 				1A672DD725607E0800635E2B /* Weather */,
 				1A672DD625607DFC00635E2B /* Translate */,
-				1A1A36E3255DAEC1003EFDA7 /* Suporting Files */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +201,52 @@
 				1A7A4F3A255406580096BA3E /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1A9FD3C22580CE4D003F20A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A9FD3C52580CE73003F20A2 /* Translate */,
+				1A9FD3C42580CE69003F20A2 /* Weather */,
+				1A9FD3C32580CE61003F20A2 /* Exchange */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A9FD3C32580CE61003F20A2 /* Exchange */ = {
+			isa = PBXGroup;
+			children = (
+				1A8916A8257F856C0026D3B9 /* Exchange.json */,
+				1A9FD3D42580CF99003F20A2 /* ExchangeServiceTests.swift */,
+			);
+			path = Exchange;
+			sourceTree = "<group>";
+		};
+		1A9FD3C42580CE69003F20A2 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				1A8916AD257F85860026D3B9 /* Weather.json */,
+				1A9FD3CF2580CF85003F20A2 /* WeatherServiceTests.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		1A9FD3C52580CE73003F20A2 /* Translate */ = {
+			isa = PBXGroup;
+			children = (
+				1A8916B2257F85990026D3B9 /* Translate.json */,
+				1A9FD3CA2580CF16003F20A2 /* TranslateServiceTests.swift */,
+			);
+			path = Translate;
+			sourceTree = "<group>";
+		};
+		1A9FD3C62580CE9D003F20A2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1A8916B7257F8A7B0026D3B9 /* FakeResponseData.swift */,
+				1A8916BC257FCC490026D3B9 /* URLSessionFake.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,24 +287,6 @@
 			productReference = 1A7A4F4A2554065D0096BA3E /* LeBaluchonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1A7A4F542554065D0096BA3E /* LeBaluchonUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1A7A4F642554065D0096BA3E /* Build configuration list for PBXNativeTarget "LeBaluchonUITests" */;
-			buildPhases = (
-				1A7A4F512554065D0096BA3E /* Sources */,
-				1A7A4F522554065D0096BA3E /* Frameworks */,
-				1A7A4F532554065D0096BA3E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1A7A4F572554065D0096BA3E /* PBXTargetDependency */,
-			);
-			name = LeBaluchonUITests;
-			productName = LeBaluchonUITests;
-			productReference = 1A7A4F552554065D0096BA3E /* LeBaluchonUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -292,10 +300,6 @@
 						CreatedOnToolsVersion = 12.1;
 					};
 					1A7A4F492554065D0096BA3E = {
-						CreatedOnToolsVersion = 12.1;
-						TestTargetID = 1A7A4F30255406580096BA3E;
-					};
-					1A7A4F542554065D0096BA3E = {
 						CreatedOnToolsVersion = 12.1;
 						TestTargetID = 1A7A4F30255406580096BA3E;
 					};
@@ -316,7 +320,6 @@
 			targets = (
 				1A7A4F30255406580096BA3E /* LeBaluchon */,
 				1A7A4F492554065D0096BA3E /* LeBaluchonTests */,
-				1A7A4F542554065D0096BA3E /* LeBaluchonUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -336,13 +339,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1A7A4F532554065D0096BA3E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				1A8916AE257F85860026D3B9 /* Weather.json in Resources */,
+				1A8916B3257F85990026D3B9 /* Translate.json in Resources */,
+				1A8916A9257F856C0026D3B9 /* Exchange.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,12 +353,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A7A4F3F255406580096BA3E /* LeBaluchon.xcdatamodeld in Sources */,
-				1A1A36E5255DAEED003EFDA7 /* Devises.swift in Sources */,
 				1A7A4F9C2556AC060096BA3E /* WeatherViewController.swift in Sources */,
 				1A7A4F922556ABA80096BA3E /* ExchangeViewController.swift in Sources */,
 				1ACE19C22573A5FE003ABF1E /* TranslateService.swift in Sources */,
 				1A10DED6255952BC00949512 /* Exchange.swift in Sources */,
-				1A1A36ED255DAF58003EFDA7 /* Language.swift in Sources */,
 				1A110FA32565DAAE00DE32CC /* WeatherData.swift in Sources */,
 				1A7A4F82255560750096BA3E /* Continent.swift in Sources */,
 				1A7A4F35255406580096BA3E /* AppDelegate.swift in Sources */,
@@ -376,15 +373,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A7A4F4F2554065D0096BA3E /* LeBaluchonTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1A7A4F512554065D0096BA3E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A7A4F5A2554065D0096BA3E /* LeBaluchonUITests.swift in Sources */,
+				1A9FD3D02580CF85003F20A2 /* WeatherServiceTests.swift in Sources */,
+				1A8916BD257FCC490026D3B9 /* URLSessionFake.swift in Sources */,
+				1A9FD3D52580CF99003F20A2 /* ExchangeServiceTests.swift in Sources */,
+				1A8916B8257F8A7B0026D3B9 /* FakeResponseData.swift in Sources */,
+				1A9FD3CB2580CF16003F20A2 /* TranslateServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,11 +388,6 @@
 			isa = PBXTargetDependency;
 			target = 1A7A4F30255406580096BA3E /* LeBaluchon */;
 			targetProxy = 1A7A4F4B2554065D0096BA3E /* PBXContainerItemProxy */;
-		};
-		1A7A4F572554065D0096BA3E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1A7A4F30255406580096BA3E /* LeBaluchon */;
-			targetProxy = 1A7A4F562554065D0096BA3E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -621,46 +609,6 @@
 			};
 			name = Release;
 		};
-		1A7A4F652554065D0096BA3E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VCS78HPQ4F;
-				INFOPLIST_FILE = LeBaluchonUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.hanullimparis.LeBaluchonUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LeBaluchon;
-			};
-			name = Debug;
-		};
-		1A7A4F662554065D0096BA3E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VCS78HPQ4F;
-				INFOPLIST_FILE = LeBaluchonUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.hanullimparis.LeBaluchonUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LeBaluchon;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -687,15 +635,6 @@
 			buildConfigurations = (
 				1A7A4F622554065D0096BA3E /* Debug */,
 				1A7A4F632554065D0096BA3E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1A7A4F642554065D0096BA3E /* Build configuration list for PBXNativeTarget "LeBaluchonUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1A7A4F652554065D0096BA3E /* Debug */,
-				1A7A4F662554065D0096BA3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

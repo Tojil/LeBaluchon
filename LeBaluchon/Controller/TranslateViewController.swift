@@ -29,6 +29,7 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
         return true
     }
     
+    
     @IBAction func translateTextButton(_ sender: UIButton) {
         translateService.getTranslation(text: frenchTextView.text!) { (result) in
             switch result {

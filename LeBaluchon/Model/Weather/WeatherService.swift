@@ -9,10 +9,9 @@ import Foundation
 
 class WeatherService {
     
-    var iconCode = ""
-    
     private var task: URLSessionTask?
     private let weatherSession: URLSession
+    
     init(weatherSession: URLSession = URLSession(configuration: .default)) {
         self.weatherSession = weatherSession
     }
@@ -57,15 +56,15 @@ class WeatherService {
             return "scatteredClouds"
         case "04d", "04n":
             return "overcastClouds"
-        case "09d":
+        case "09d", "09n":
             return "drizzle"
-        case "10d":
+        case "10d", "10n":
             return "rain"
-        case "11d":
+        case "11d", "11n":
             return "thunderstorm"
-        case "13d":
+        case "13d", "13n":
             return "snow"
-        case "50d":
+        case "50d", "50n":
             return "mist"
         default:
             return ""

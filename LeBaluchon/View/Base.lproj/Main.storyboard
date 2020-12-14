@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kUK-51-hOr">
-                                <rect key="frame" x="50" y="108" width="314" height="47"/>
+                                <rect key="frame" x="50" y="128" width="314" height="47"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vv2-3l-gJM">
                                         <rect key="frame" x="0.0" y="0.0" width="152" height="47"/>
@@ -44,13 +44,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="French" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNu-E0-4IO" userLabel="FrenchLabel">
-                                <rect key="frame" x="60" y="185" width="294" height="32.5"/>
+                                <rect key="frame" x="60" y="205" width="294" height="32.5"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="28"/>
                                 <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="t99-AY-qt1" userLabel="French Text View">
-                                <rect key="frame" x="50" y="237.5" width="314" height="200"/>
+                                <rect key="frame" x="50" y="257.5" width="314" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="T0v-JF-eRt"/>
                                 </constraints>
@@ -62,13 +62,13 @@
                                 </connections>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFG-uO-9Rb" userLabel="EnglishLabel">
-                                <rect key="frame" x="60" y="467.5" width="294" height="32.5"/>
+                                <rect key="frame" x="60" y="487.5" width="294" height="32.5"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="28"/>
                                 <color key="textColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IwH-Nt-Ylx" userLabel="English Text View">
-                                <rect key="frame" x="50" y="520" width="314" height="200"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IwH-Nt-Ylx" userLabel="English Text View">
+                                <rect key="frame" x="50" y="540" width="314" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="GcA-UT-BK1"/>
@@ -92,7 +92,7 @@
                             <constraint firstItem="t99-AY-qt1" firstAttribute="leading" secondItem="iYD-yK-ssv" secondAttribute="leading" constant="50" id="Usg-hF-iJ6"/>
                             <constraint firstItem="IwH-Nt-Ylx" firstAttribute="leading" secondItem="iYD-yK-ssv" secondAttribute="leading" constant="50" id="i5q-19-67J"/>
                             <constraint firstItem="aNu-E0-4IO" firstAttribute="leading" secondItem="iYD-yK-ssv" secondAttribute="leading" constant="60" id="tdZ-ur-9Ic"/>
-                            <constraint firstItem="kUK-51-hOr" firstAttribute="top" secondItem="iYD-yK-ssv" secondAttribute="top" constant="20" id="udf-Ke-nBN"/>
+                            <constraint firstItem="kUK-51-hOr" firstAttribute="top" secondItem="iYD-yK-ssv" secondAttribute="top" constant="40" id="udf-Ke-nBN"/>
                             <constraint firstItem="iYD-yK-ssv" firstAttribute="trailing" secondItem="aNu-E0-4IO" secondAttribute="trailing" constant="60" id="unh-3m-sTn"/>
                             <constraint firstItem="iYD-yK-ssv" firstAttribute="trailing" secondItem="IwH-Nt-Ylx" secondAttribute="trailing" constant="50" id="vG2-nl-Q84"/>
                             <constraint firstItem="t99-AY-qt1" firstAttribute="top" secondItem="aNu-E0-4IO" secondAttribute="bottom" constant="20" id="xSF-2g-ans"/>
@@ -102,8 +102,8 @@
                             <outletCollection property="gestureRecognizers" destination="CSx-UP-6a1" appends="YES" id="8JF-ny-uak"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Translate" image="translate" id="aoB-4l-3Vd"/>
-                    <navigationItem key="navigationItem" id="5MR-VJ-OuR"/>
+                    <tabBarItem key="tabBarItem" title="Translate" id="aoB-4l-3Vd"/>
+                    <navigationItem key="navigationItem" title="Translation" id="5MR-VJ-OuR"/>
                     <connections>
                         <outlet property="englishLabel" destination="XFG-uO-9Rb" id="5Ni-Cm-Ysc"/>
                         <outlet property="englishTextView" destination="IwH-Nt-Ylx" id="rMu-7E-nez"/>
@@ -229,8 +229,8 @@
                             <outletCollection property="gestureRecognizers" destination="OhL-pL-7Wj" appends="YES" id="cVv-jN-zUB"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Exchange" image="money" selectedImage="money" id="Fa7-ZK-GfW" customClass="Chan"/>
-                    <navigationItem key="navigationItem" id="UaK-rY-gRU"/>
+                    <tabBarItem key="tabBarItem" title="Exchange" id="Fa7-ZK-GfW" customClass="Chan"/>
+                    <navigationItem key="navigationItem" title="Exchange" id="UaK-rY-gRU"/>
                     <connections>
                         <outlet property="convertButton" destination="oAd-HI-lzC" id="cBX-Qc-55w"/>
                         <outlet property="countryFromExchange" destination="SSl-7d-J8h" id="Bgy-rl-SHA"/>
@@ -255,10 +255,11 @@
         <scene sceneID="eXu-Qr-UdL">
             <objects>
                 <tabBarController id="T5R-bU-P6e" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VC3-70-8Da">
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VC3-70-8Da">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="lBX-T0-cbO" kind="relationship" relationship="viewControllers" id="Jfj-2p-zic"/>
@@ -274,10 +275,15 @@
         <scene sceneID="FMF-3E-5PS">
             <objects>
                 <navigationController id="RZr-VU-Ig5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Weather" image="tornadito" id="pRH-ti-vmF"/>
+                    <tabBarItem key="tabBarItem" title="Weather" image="weather-app" id="pRH-ti-vmF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ha7-dB-43f">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="35"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="cf6-PO-CQc" kind="relationship" relationship="rootViewController" id="ZSJ-ST-Rrl"/>
@@ -287,7 +293,7 @@
             </objects>
             <point key="canvasLocation" x="-533" y="-33"/>
         </scene>
-        <!--Weather View Controller-->
+        <!--Weather-->
         <scene sceneID="ndI-qs-MVh">
             <objects>
                 <viewController id="cf6-PO-CQc" customClass="WeatherViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
@@ -464,7 +470,7 @@
                             <constraint firstItem="8Iw-yY-B6Y" firstAttribute="leading" secondItem="jt5-DU-FYS" secondAttribute="leading" constant="20" id="l9A-tl-V51"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cM3-un-0MK"/>
+                    <navigationItem key="navigationItem" title="Weather" id="cM3-un-0MK"/>
                     <connections>
                         <outlet property="descriptionDestCloudLabel" destination="bYq-k3-J5I" id="5a0-hb-iF9"/>
                         <outlet property="destCityLabel" destination="EeZ-78-JHo" id="JC5-fm-qH9"/>
@@ -488,10 +494,15 @@
         <scene sceneID="M2u-ZC-yax">
             <objects>
                 <navigationController id="uzh-I4-44h" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Translate" image="translate" id="4Ws-va-PYk"/>
+                    <tabBarItem key="tabBarItem" title="Translate" image="translating copie" id="4Ws-va-PYk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zhP-vf-88l">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="35"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="h7h-Nx-POl" kind="relationship" relationship="rootViewController" id="bHr-3j-Kjo"/>
@@ -505,10 +516,15 @@
         <scene sceneID="605-Km-NbD">
             <objects>
                 <navigationController id="lBX-T0-cbO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Exchange" image="money" id="UMc-Ff-5da"/>
+                    <tabBarItem key="tabBarItem" title="Exchange" image="wallet" id="UMc-Ff-5da"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wdU-kK-rfw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.094055421649999998" green="0.69331258539999996" blue="0.79225546120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="35"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="r25-Wg-2Gh" kind="relationship" relationship="rootViewController" id="xm4-6G-ujr"/>
@@ -520,10 +536,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="money" width="20" height="20"/>
         <image name="thermometer" catalog="system" width="93" height="128"/>
-        <image name="tornadito" width="12" height="20"/>
-        <image name="translate" width="20" height="20"/>
+        <image name="translating copie" width="25" height="25"/>
+        <image name="wallet" width="25" height="25"/>
+        <image name="weather-app" width="25" height="25"/>
         <image name="wind" catalog="system" width="128" height="101"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

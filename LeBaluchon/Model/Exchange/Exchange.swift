@@ -18,10 +18,6 @@ struct Exchange: Codable {
 // MARK: - Rates
 struct Rates: Codable {
     let usd: Double
-    
-    init(usd: Double) {
-        self.usd = usd
-    }
 
     enum CodingKeys: String, CodingKey {
         case usd = "USD"

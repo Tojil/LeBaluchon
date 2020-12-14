@@ -17,10 +17,8 @@ class TranslateService {
     
     // Creating the request from the URL with accessKey
     func getTranslation(text: String, callback: @escaping (Result<TranslateData, NetworkError>) -> Void) {
-        guard let textEncoded = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
-            return
-        }
-        guard let translateUrl = URL(string: "https://translation.googleapis.com/language/translate/v2?source=fr&target=en&q=\( textEncoded)&key=AIzaSyDHSuz7FBPnik2qt5WxHdghlDqw-KirbCU") else { return }
+        guard let textEncoded = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
+        guard let translateUrl = URL(string: "https://translation.googleapis.com/language/translate/v2?source=fr&target=en&q=\(textEncoded)&key=AIzaSyDHSuz7FBPnik2qt5WxHdghlDqw-KirbCU") else { return }
         task?.cancel()
         task = translateSession.dataTask(with: translateUrl, completionHandler: { (data, response, error) in
             

@@ -1,0 +1,75 @@
+
+Showing Recent Messages
+MkDir /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Products/Debug-iphonesimulator/LeBaluchonUITests-Runner.app/PlugIns/LeBaluchonUITests.xctest (in target 'LeBaluchonUITests' from project 'LeBaluchon')
+    cd /Users/scs/Documents/OpenClassroom/LeBaluchon
+    /bin/mkdir -p /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Products/Debug-iphonesimulator/LeBaluchonUITests-Runner.app/PlugIns/LeBaluchonUITests.xctest
+
+WriteAuxiliaryFile /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/DerivedSources/Entitlements-Simulated.plist (in target 'LeBaluchonUITests' from project 'LeBaluchon')
+    cd /Users/scs/Documents/OpenClassroom/LeBaluchon
+    write-file /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/DerivedSources/Entitlements-Simulated.plist
+
+ProcessProductPackaging "" /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/LeBaluchonUITests.xctest-Simulated.xcent (in target 'LeBaluchonUITests' from project 'LeBaluchon')
+    cd /Users/scs/Documents/OpenClassroom/LeBaluchon
+    
+
+Entitlements:
+
+{
+    "application-identifier" = "VCS78HPQ4F.fr.hanullimparis.LeBaluchonUITests.xctrunner";
+    "com.apple.security.get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "VCS78HPQ4F.fr.hanullimparis.LeBaluchonUITests.xctrunner"
+    );
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/LeBaluchonUITests.xctest-Simulated.xcent
+
+WriteAuxiliaryFile /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/all-product-headers.yaml (in target 'LeBaluchonUITests' from project 'LeBaluchon')
+    cd /Users/scs/Documents/OpenClassroom/LeBaluchon
+    write-file /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/all-product-headers.yaml
+
+WriteAuxiliaryFile /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/LeBaluchonUITests-project-headers.hmap (in target 'LeBaluchonUITests' from project 'LeBaluchon')
+    cd /Users/scs/Documents/OpenClassroom/LeBaluchon
+    write-file /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/LeBaluchonUITests-project-headers.hmap
+
+WriteAuxiliaryFile /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/LeBaluchonUITests.hmap (in target 'LeBaluchonUITests' from project 'LeBaluchon')
+    cd /Users/scs/Documents/OpenClassroom/LeBaluchon
+    write-file /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/LeBaluchonUITests.hmap
+
+WriteAuxiliaryFile /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/LeBaluchonUITests-own-target-headers.hmap (in target 'LeBaluchonUITests' from project 'LeBaluchon')
+    cd /Users/scs/Documents/OpenClassroom/LeBaluchon
+    write-file /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/LeBaluchonUITests-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/LeBaluchonUITests-generated-files.hmap (in target 'LeBaluchonUITests' from project 'LeBaluchon')
+    cd /Users/scs/Documents/OpenClassroom/LeBaluchon
+    write-file /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/LeBaluchonUITests-generated-files.hmap
+
+WriteAuxiliaryFile /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/LeBaluchonUITests-all-target-headers.hmap (in target 'LeBaluchonUITests' from project 'LeBaluchon')
+    cd /Users/scs/Documents/OpenClassroom/LeBaluchon
+    write-file /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/LeBaluchonUITests-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/LeBaluchonUITests-all-non-framework-target-headers.hmap (in target 'LeBaluchonUITests' from project 'LeBaluchon')
+    cd /Users/scs/Documents/OpenClassroom/LeBaluchon
+    write-file /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/LeBaluchonUITests-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/Objects-normal/x86_64/LeBaluchonUITests.SwiftFileList (in target 'LeBaluchonUITests' from project 'LeBaluchon')
+    cd /Users/scs/Documents/OpenClassroom/LeBaluchon
+    write-file /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/Objects-normal/x86_64/LeBaluchonUITests.SwiftFileList
+
+WriteAuxiliaryFile /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/Objects-normal/x86_64/LeBaluchonUITests-OutputFileMap.json (in target 'LeBaluchonUITests' from project 'LeBaluchon')
+    cd /Users/scs/Documents/OpenClassroom/LeBaluchon
+    write-file /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/Objects-normal/x86_64/LeBaluchonUITests-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/Objects-normal/x86_64/LeBaluchonUITests.LinkFileList (in target 'LeBaluchonUITests' from project 'LeBaluchon')
+    cd /Users/scs/Documents/OpenClassroom/LeBaluchon
+    write-file /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/Objects-normal/x86_64/LeBaluchonUITests.LinkFileList
+
+WriteAuxiliaryFile /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/ProductTypeInfoPlistAdditions.plist (in target 'LeBaluchonUITests' from project 'LeBaluchon')
+    cd /Users/scs/Documents/OpenClassroom/LeBaluchon
+    write-file /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/ProductTypeInfoPlistAdditions.plist
+
+ProcessInfoPlistFile /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Products/Debug-iphonesimulator/LeBaluchonUITests-Runner.app/PlugIns/LeBaluchonUITests.xctest/Info.plist /Users/scs/Documents/OpenClassroom/LeBaluchon/LeBaluchonUITests/Info.plist (in target 'LeBaluchonUITests' from project 'LeBaluchon')
+    cd /Users/scs/Documents/OpenClassroom/LeBaluchon
+    builtin-infoPlistUtility /Users/scs/Documents/OpenClassroom/LeBaluchon/LeBaluchonUITests/Info.plist -producttype com.apple.product-type.bundle.ui-testing -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Intermediates.noindex/LeBaluchon.build/Debug-iphonesimulator/LeBaluchonUITests.build/ProductTypeInfoPlistAdditions.plist -o /Users/scs/Library/Developer/Xcode/DerivedData/LeBaluchon-dgtydzgzwozfqffpqfqjheubudvr/Build/Products/Debug-iphonesimulator/LeBaluchonUITests-Runner.app/PlugIns/LeBaluchonUITests.xctest/Info.plist
+
