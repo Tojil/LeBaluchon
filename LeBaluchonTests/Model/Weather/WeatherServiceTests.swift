@@ -23,7 +23,8 @@ class WeatherServiceTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Wait for queue change")
         weatherService.getWeather(callback:) { (result) in
             // Then
-            XCTAssertFalse(false)
+            guard case .failure(let error) = result else { return }
+            XCTAssertNotNil(error)
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 0.01)
@@ -39,7 +40,8 @@ class WeatherServiceTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Wait for queue change")
         weatherService.getWeather(callback:) { (result) in
             // Then
-            XCTAssertFalse(false)
+            guard case .failure(let error) = result else { return }
+            XCTAssertNotNil(error)
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 0.01)
@@ -55,7 +57,8 @@ class WeatherServiceTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Wait for queue change")
         weatherService.getWeather(callback:) { (result) in
             // Then
-            XCTAssertFalse(false)
+            guard case .failure(let error) = result else { return }
+            XCTAssertNotNil(error)
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 0.01)
@@ -71,13 +74,14 @@ class WeatherServiceTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Wait for queue change")
         weatherService.getWeather(callback:) { (result) in
             // Then
-            XCTAssertFalse(false)
+            guard case .failure(let error) = result else { return }
+            XCTAssertNotNil(error)
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 0.01)
     }
     
-    func testGetWeatherShouldGetFailedCallbackNoErrorAndCorrectData() {
+    func testGetWeatherShouldGetCorrectCallbackNoErrorAndCorrectData() {
         // Given
         let weatherService = WeatherService(
             weatherSession: URLSessionFake(data: FakeResponseData.weatherCorrectData, response: FakeResponseData.responseOK, error: nil)
@@ -87,7 +91,10 @@ class WeatherServiceTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Wait for queue change")
         weatherService.getWeather(callback:) { (result) in
             // Then
-            XCTAssertFalse(false)
+            guard case .success(let data) = result else { return }
+            
+            let weatherText = -0.12
+            XCTAssertEqual(data.list[0].main.temp, weatherText)
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 0.01)
@@ -106,162 +113,162 @@ class WeatherServiceTests: XCTestCase {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "01n")
+        let stringImage = weatherService.imageString(icon: "01n")
         // Then
-        XCTestSuite(forTestCaseWithName: "moon")
+        XCTAssertEqual(stringImage, "moon")
     }
     
     func testGivenWeatherHasNoPicture_WhenWeatherHasCaseCode02d_ThenWeatherHasPictureFewClouds() {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "02d")
+        let stringImage = weatherService.imageString(icon: "02d")
         // Then
-        XCTestSuite(forTestCaseWithName: "fewClouds")
+        XCTAssertEqual(stringImage, "fewClouds")
     }
     
     func testGivenWeatherHasNoPicture_WhenWeatherHasCaseCode02n_ThenWeatherHasPictureFewClouds() {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "02n")
+        let stringImage = weatherService.imageString(icon: "02n")
         // Then
-        XCTestSuite(forTestCaseWithName: "fewClouds")
+        XCTAssertEqual(stringImage, "fewClouds")
     }
     
     func testGivenWeatherHasNoPicture_WhenWeatherHasCaseCode03d_ThenWeatherHasPictureScatteredClouds() {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "03d")
+        let stringImage = weatherService.imageString(icon: "03d")
         // Then
-        XCTestSuite(forTestCaseWithName: "fewClouds")
+        XCTAssertEqual(stringImage, "scatteredClouds")
     }
     
     func testGivenWeatherHasNoPicture_WhenWeatherHasCaseCode03n_ThenWeatherHasPictureScatteredClouds() {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "03n")
+        let stringImage = weatherService.imageString(icon: "03n")
         // Then
-        XCTestSuite(forTestCaseWithName: "fewClouds")
+        XCTAssertEqual(stringImage, "scatteredClouds")
     }
     
     func testGivenWeatherHasNoPicture_WhenWeatherHasCaseCode04d_ThenWeatherHasPictureOvercastClouds() {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "04d")
+        let stringImage = weatherService.imageString(icon: "04d")
         // Then
-        XCTestSuite(forTestCaseWithName: "overcastClouds")
+        XCTAssertEqual(stringImage, "overcastClouds")
     }
     
     func testGivenWeatherHasNoPicture_WhenWeatherHasCaseCode04n_ThenWeatherHasPictureOvercastClouds() {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "04n")
+        let stringImage = weatherService.imageString(icon: "04n")
         // Then
-        XCTestSuite(forTestCaseWithName: "overcastClouds")
+        XCTAssertEqual(stringImage, "overcastClouds")
     }
     
     func testGivenWeatherHasNoPicture_WhenWeatherHasCaseCode09d_ThenWeatherHasPictureDrizzle() {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "09d")
+        let stringImage = weatherService.imageString(icon: "09d")
         // Then
-        XCTestSuite(forTestCaseWithName: "drizzle")
+        XCTAssertEqual(stringImage, "drizzle")
     }
     
     func testGivenWeatherHasNoPicture_WhenWeatherHasCaseCode09n_ThenWeatherHasPictureDrizzle() {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "09n")
+        let stringImage = weatherService.imageString(icon: "09n")
         // Then
-        XCTestSuite(forTestCaseWithName: "drizzle")
+        XCTAssertEqual(stringImage, "drizzle")
     }
     
     func testGivenWeatherHasNoPicture_WhenWeatherHasCaseCode10d_ThenWeatherHasPictureRain() {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "10d")
+        let stringImage = weatherService.imageString(icon: "10d")
         // Then
-        XCTestSuite(forTestCaseWithName: "rain")
+        XCTAssertEqual(stringImage, "rain")
     }
     
     func testGivenWeatherHasNoPicture_WhenWeatherHasCaseCode10n_ThenWeatherHasPictureRain() {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "10n")
+        let stringImage = weatherService.imageString(icon: "10n")
         // Then
-        XCTestSuite(forTestCaseWithName: "rain")
+        XCTAssertEqual(stringImage, "rain")
     }
     
     func testGivenWeatherHasNoPicture_WhenWeatherHasCaseCode11d_ThenWeatherHasPictureThunderstorm() {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "11d")
+        let stringImage = weatherService.imageString(icon: "11d")
         // Then
-        XCTestSuite(forTestCaseWithName: "thunderstorm")
+        XCTAssertEqual(stringImage, "thunderstorm")
     }
     
     func testGivenWeatherHasNoPicture_WhenWeatherHasCaseCode11n_ThenWeatherHasPictureThunderstorm() {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "11n")
+        let stringImage = weatherService.imageString(icon: "11n")
         // Then
-        XCTestSuite(forTestCaseWithName: "thunderstorm")
+        XCTAssertEqual(stringImage, "thunderstorm")
     }
     
     func testGivenWeatherHasNoPicture_WhenWeatherHasCaseCode13d_ThenWeatherHasPictureSnow() {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "13d")
+        let stringImage = weatherService.imageString(icon: "13d")
         // Then
-        XCTestSuite(forTestCaseWithName: "snow")
+        XCTAssertEqual(stringImage, "snow")
     }
     
     func testGivenWeatherHasNoPicture_WhenWeatherHasCaseCode13n_ThenWeatherHasPictureSnow() {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "13n")
+        let stringImage = weatherService.imageString(icon: "13n")
         // Then
-        XCTestSuite(forTestCaseWithName: "snow")
+        XCTAssertEqual(stringImage, "snow")
     }
     
     func testGivenWeatherHasNoPicture_WhenWeatherHasCaseCode50d_ThenWeatherHasPictureMist() {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "50d")
+        let stringImage = weatherService.imageString(icon: "50d")
         // Then
-        XCTestSuite(forTestCaseWithName: "mist")
+        XCTAssertEqual(stringImage, "mist")
     }
     
     func testGivenWeatherHasNoPicture_WhenWeatherHasCaseCode50n_ThenWeatherHasPictureMist() {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "50n")
+        let stringImage = weatherService.imageString(icon: "50d")
         // Then
-        XCTestSuite(forTestCaseWithName: "mist")
+        XCTAssertEqual(stringImage, "mist")
     }
     
     func testGivenWeatherHasNoPicture_WhenWeatherHasNoCode_ThenWeatherHasNoPicture() {
         // Given
         let weatherService = WeatherService()
         // When
-        weatherService.imageString(icon: "")
+        let stringImage = weatherService.imageString(icon: "")
         // Then
-        XCTestSuite(forTestCaseWithName: "")
+        XCTAssertEqual(stringImage, "")
     }
     
     

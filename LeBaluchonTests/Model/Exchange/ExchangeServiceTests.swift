@@ -19,7 +19,8 @@ class ExchangeServiceTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Wait for queue change")
         exchangeService.getExchange(callback:) { (result) in
             // Then
-            XCTAssertFalse(false)
+            guard case .failure(let error) = result else { return }
+            XCTAssertNotNil(error)
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 0.01)
@@ -34,7 +35,8 @@ class ExchangeServiceTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Wait for queue change")
         exchangeService.getExchange(callback:) { (result) in
             // Then
-            XCTAssertFalse(false)
+            guard case .failure(let error) = result else { return }
+            XCTAssertNotNil(error)
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 0.01)
@@ -50,7 +52,8 @@ class ExchangeServiceTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Wait for queue change")
         exchangeService.getExchange(callback:) { (result) in
             // Then
-            XCTAssertFalse(false)
+            guard case .failure(let error) = result else { return }
+            XCTAssertNotNil(error)
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 0.01)
@@ -66,13 +69,14 @@ class ExchangeServiceTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Wait for queue change")
         exchangeService.getExchange(callback:) { (result) in
             // Then
-            XCTAssertFalse(false)
+            guard case .failure(let error) = result else { return }
+            XCTAssertNotNil(error)
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 0.01)
     }
     
-    func testGetExchangeShouldGetFailedCallbackNoErrorAndCorrectData() {
+    func testGetExchangeShouldGetCorrectCallbackNoErrorAndCorrectData() {
         // Given
         
         let exchangeService = ExchangeService(
@@ -82,7 +86,10 @@ class ExchangeServiceTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Wait for queue change")
         exchangeService.getExchange(callback:) { (result) in
             // Then
-            XCTAssertFalse(false)
+            guard case .success(let data) = result else { return }
+            
+            let exchangeText = 1.212651
+            XCTAssertEqual(data.rates.usd, exchangeText)
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 0.01)

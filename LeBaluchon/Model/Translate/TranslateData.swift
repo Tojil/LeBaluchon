@@ -7,13 +7,15 @@
 
 import Foundation
 
-// MARK: - Welcome
+// MARK: - Structures
+
+// MARK: - TranslateData
 struct TranslateData: Codable {
-    let data: DataClass
+    let data: TranslateDataClass
 }
 
-// MARK: - DataClass
-struct DataClass: Codable {
+// MARK: - TranslateDataClass
+struct TranslateDataClass: Codable {
     let translations: [Translation]
 }
 
@@ -22,13 +24,13 @@ struct Translation: Codable {
     let translatedText: String
 }
 
-// MARK: - Welcome
-struct Welcome: Codable {
-    let data: DataClass
+// MARK: - DetectData
+struct DetectData: Codable {
+    let data: DetectDataClass
 }
 
-// MARK: - DataClass
-struct DataClass: Codable {
+// MARK: - DetectDataClass
+struct DetectDataClass: Codable {
     let detections: [[Detection]]
 }
 
@@ -38,3 +40,4 @@ struct Detection: Codable {
     let language: String
     let isReliable: Bool
 }
+

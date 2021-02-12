@@ -7,7 +7,9 @@
 
 import Foundation
 
-// MARK: - Welcome
+// MARK: - Structures
+
+//MARK: - WeatherData
 struct WeatherData: Codable {
     let list: [List]
 }

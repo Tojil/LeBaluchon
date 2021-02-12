@@ -9,6 +9,7 @@ import UIKit
 
 class ExchangeViewController: UIViewController, UITextFieldDelegate {
     
+    //MARK: - Outlets
     
     @IBOutlet weak var countryFromExchange: UILabel!
     @IBOutlet weak var countryToExchange: UILabel!
@@ -17,15 +18,18 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var resultExchangeLabel: UILabel!
     @IBOutlet weak var dateExchangeLabel: UILabel!
     @IBOutlet weak var convertButton: UIButton!
-    @IBOutlet weak var refreshButton: UIButton!
+    @IBOutlet weak var clearButton: UIButton!
     
+    //MARK: - Public properties
     
     let exchangeService = ExchangeService()
     var exchangeRate: Double = 1
+    
+    //MARK: - Override
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        exchangeService.getExchange { (result) in
+        exchangeService.getExchange { [unowned self] result in
             switch result {
             case .success(let exchange):
                 DispatchQueue.main.async {
@@ -35,11 +39,15 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
                     
                 }
             case .failure(let error):
-                self.alert(title: "Error", message: "Le reseau wifi a foutu le camp, vous, vous demandez surement : Qu'est ce que je vais pourvoir faire avec un super telephone et sans une goutte de reseau ? ou alors un gramme de reseau ?  Allez je vais vous sauver encore une fois 'ACTIVEZ LA 5G' ")
-                print(error.localizedDescription)
+                DispatchQueue.main.async {
+                    self.alert(title: "Error", message: "There is some problem with the network")
+                    print(error.localizedDescription)
+                }
             }
         }
     }
+    
+    //MARK: - Private properties
     
     private var numberFormatter: NumberFormatter = {
         let numberFormatter = NumberFormatter()
@@ -47,15 +55,18 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
         numberFormatter.maximumFractionDigits = 2
         return numberFormatter
     }()
-
-    @IBAction func refresh(_ sender: UIButton) {
+    
+    //MARK: - Actions
+    
+    
+    @IBAction func clear(_ sender: UIButton) {
         self.currencyToConvertTextField.text = ""
         self.resultExchangeLabel.text = ""
     }
     
     @IBAction func convert(_ sender: UIButton) {
         guard currencyToConvertTextField.text != "", currencyToConvertTextField.text != "," else {
-            alert(title: "Désolé c'est ma pause mais si vous insistez alors entrez au moins un montant, un chiffre quoi !", message: "Aucun montant saisis et puis, comme ce dimanche je ne travaille pas et celui d'aprés non plus, alors je fais le pont")
+            alert(title: "Please !", message: "Enter an amount")
             return
         }
         guard let stringAmount = currencyToConvertTextField.text else { return }
@@ -65,20 +76,18 @@ class ExchangeViewController: UIViewController, UITextFieldDelegate {
         guard let resultFormated = numberFormatter.string(from: NSNumber(value: resultDoubled)) else { return }
         resultExchangeLabel.text = "\(resultFormated)"
     }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
+
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         currencyToConvertTextField.resignFirstResponder()
     }
     
+    //MARK: - Methods
+    
     // Show a custom alert based on title and message received
     func alert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let ok = UIAlertAction(title: "Oui Chef", style:.default, handler: nil)
+        let ok = UIAlertAction(title: "Ok", style:.default, handler: nil)
         alert.addAction(ok)
         present(alert, animated: true, completion: nil)
     }

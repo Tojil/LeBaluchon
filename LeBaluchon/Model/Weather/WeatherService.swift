@@ -9,15 +9,20 @@ import Foundation
 
 class WeatherService {
     
+    // MARK: - Private properties
+    
     private var task: URLSessionTask?
     private let weatherSession: URLSession
+    
+    // MARK: - Init
     
     init(weatherSession: URLSession = URLSession(configuration: .default)) {
         self.weatherSession = weatherSession
     }
     
+    // MARK: - Methods
     
-    // Creating the request from the URL with accessKey
+    // Creating the request weather from the URL with accessKey
     func getWeather(callback: @escaping (Result<WeatherData, NetworkError>) -> Void) {
         guard let weatherUrl = URL(string: "http://api.openweathermap.org/data/2.5/group?id=5128581,2988507&units=metric&appid=b4819021a718cc1d9474678bf93c4728#error401") else { return }
         task?.cancel()
@@ -44,6 +49,7 @@ class WeatherService {
         task?.resume()
     }
     
+    // Assign the image, according to the code given by the data
     func imageString(icon: String) -> String {
         switch icon {
         case "01d":
